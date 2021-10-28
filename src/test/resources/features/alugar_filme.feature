@@ -28,7 +28,7 @@ When alugar
 Then o preco do aluguel sera R$ <valor>
 And a data de entreda sera em <qtdDias> dias
 And a pontuacao sera de <pontuacao> pontos
-// teste
+
 Examples: 
 |preco	|tipo			 |valor|	qtdDias|pontuacao|
 |4			|extendido | 8		|	3 		 | 2		 	 |

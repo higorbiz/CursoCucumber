@@ -1,888 +1,159 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/alugar_filme.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/inserir_conta.feature");
 formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Funcionalidade: Alugar Filme"
-    },
-    {
-      "line": 2,
-      "value": "#"
-    },
-    {
-      "line": 3,
-      "value": "#Como um usuario"
-    },
-    {
-      "line": 4,
-      "value": "#Eu quero cadastrar alugueis de filmes"
-    },
-    {
-      "line": 5,
-      "value": "#Para controlar precos e datas de entrega"
-    }
-  ],
-  "line": 7,
-  "name": "Alugar Filme",
-  "description": "",
-  "id": "alugar-filme",
+  "line": 1,
+  "name": "Cadastro de contas",
+  "description": "\r\nComo um usu�rio \r\nGostaria de cadastrar contas\r\nPara que eu possa distribuir meu dinheiro de uma forma mais organizada",
+  "id": "cadastro-de-contas",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "line": 8,
-  "name": "Deve alugar um filme com sucesso",
-  "description": "",
-  "id": "alugar-filme;deve-alugar-um-filme-com-sucesso",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 9,
-  "name": "um filme com estoque de 2 unidades",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 10,
-  "name": "que o preco do aluguel seja R$ 3",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 11,
-  "name": "alugar",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 12,
-  "name": "o preco do aluguel sera R$ 3",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 13,
-  "name": "a data de entreda sera em 1 dia",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 14,
-  "name": "o estoque do filme sera 1 unidade",
-  "keyword": "And "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 24
-    }
-  ],
-  "location": "AlugarFilmeSteps.umFilmeComEstoqueDeUnidades(int)"
-});
-formatter.result({
-  "duration": 197265499,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 31
-    }
-  ],
-  "location": "AlugarFilmeSteps.queOPrecoDoAluguelSejaR$(int)"
-});
-formatter.result({
-  "duration": 117899,
-  "status": "passed"
-});
-formatter.match({
-  "location": "AlugarFilmeSteps.alugar()"
-});
-formatter.result({
-  "duration": 2219301,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 27
-    }
-  ],
-  "location": "AlugarFilmeSteps.oPrecoDoAluguelSeraR$(int)"
-});
-formatter.result({
-  "duration": 3559000,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 26
-    }
-  ],
-  "location": "AlugarFilmeSteps.aDataDeEntredaSeraEmDias(int)"
-});
-formatter.result({
-  "duration": 848801,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 24
-    }
-  ],
-  "location": "AlugarFilmeSteps.oEstoqueDoFilmeSeraUnidade(int)"
-});
-formatter.result({
-  "duration": 90700,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 17,
-  "name": "Nao deve alugar filme sem estoque",
-  "description": "",
-  "id": "alugar-filme;nao-deve-alugar-filme-sem-estoque",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 18,
-  "name": "um filme com estoque de 0 unidades",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 19,
-  "name": "alugar",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 20,
-  "name": "nao sera possivel por falta de estoque",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 21,
-  "name": "o estoque do filme sera 0 unidade",
-  "keyword": "And "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "0",
-      "offset": 24
-    }
-  ],
-  "location": "AlugarFilmeSteps.umFilmeComEstoqueDeUnidades(int)"
-});
-formatter.result({
-  "duration": 164799,
-  "status": "passed"
-});
-formatter.match({
-  "location": "AlugarFilmeSteps.alugar()"
-});
-formatter.result({
-  "duration": 70700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "AlugarFilmeSteps.naoSeraPossivelPorFaltaDeEstoque()"
-});
-formatter.result({
-  "duration": 31700,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "0",
-      "offset": 24
-    }
-  ],
-  "location": "AlugarFilmeSteps.oEstoqueDoFilmeSeraUnidade(int)"
-});
-formatter.result({
-  "duration": 126100,
-  "status": "passed"
-});
-formatter.scenarioOutline({
-  "line": 23,
-  "name": "Deve dar condicoes tipo de aluguel",
-  "description": "",
-  "id": "alugar-filme;deve-dar-condicoes-tipo-de-aluguel",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 24,
-  "name": "um filme com estoque de 2 unidades",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 25,
-  "name": "que o preco do aluguel seja R$ \u003cpreco\u003e",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 26,
-  "name": "que o tipo do aluguel seja \u003ctipo\u003e",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 27,
-  "name": "alugar",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 28,
-  "name": "o preco do aluguel sera R$ \u003cvalor\u003e",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 29,
-  "name": "a data de entreda sera em \u003cqtdDias\u003e dias",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 30,
-  "name": "a pontuacao sera de \u003cpontuacao\u003e pontos",
-  "keyword": "And "
-});
-formatter.examples({
   "line": 32,
-  "name": "",
+  "name": "Nao deve inserir uma conta com nome ja existente",
   "description": "",
-  "id": "alugar-filme;deve-dar-condicoes-tipo-de-aluguel;",
-  "rows": [
-    {
-      "cells": [
-        "preco",
-        "tipo",
-        "valor",
-        "qtdDias",
-        "pontuacao"
-      ],
-      "line": 33,
-      "id": "alugar-filme;deve-dar-condicoes-tipo-de-aluguel;;1"
-    },
-    {
-      "cells": [
-        "4",
-        "extendido",
-        "8",
-        "3",
-        "2"
-      ],
-      "line": 34,
-      "id": "alugar-filme;deve-dar-condicoes-tipo-de-aluguel;;2"
-    },
-    {
-      "cells": [
-        "4",
-        "comum",
-        "4",
-        "1",
-        "1"
-      ],
-      "line": 35,
-      "id": "alugar-filme;deve-dar-condicoes-tipo-de-aluguel;;3"
-    },
-    {
-      "cells": [
-        "10",
-        "extendido",
-        "20",
-        "3",
-        "2"
-      ],
-      "line": 36,
-      "id": "alugar-filme;deve-dar-condicoes-tipo-de-aluguel;;4"
-    },
-    {
-      "cells": [
-        "5",
-        "semanal",
-        "15",
-        "7",
-        "3"
-      ],
-      "line": 37,
-      "id": "alugar-filme;deve-dar-condicoes-tipo-de-aluguel;;5"
-    }
-  ],
-  "keyword": "Examples"
+  "id": "cadastro-de-contas;nao-deve-inserir-uma-conta-com-nome-ja-existente",
+  "type": "scenario",
+  "keyword": "Scenario"
 });
-formatter.scenario({
+formatter.step({
+  "line": 33,
+  "name": "que estou acessando a aplicacao",
+  "keyword": "Given "
+});
+formatter.step({
   "line": 34,
-  "name": "Deve dar condicoes tipo de aluguel",
-  "description": "",
-  "id": "alugar-filme;deve-dar-condicoes-tipo-de-aluguel;;2",
-  "type": "scenario",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 24,
-  "name": "um filme com estoque de 2 unidades",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 25,
-  "name": "que o preco do aluguel seja R$ 4",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 26,
-  "name": "que o tipo do aluguel seja extendido",
-  "matchedColumns": [
-    1
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 27,
-  "name": "alugar",
+  "name": "informo o usuario \"higor@hotmail.com\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 28,
-  "name": "o preco do aluguel sera R$ 8",
-  "matchedColumns": [
-    2
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 29,
-  "name": "a data de entreda sera em 3 dias",
-  "matchedColumns": [
-    3
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 30,
-  "name": "a pontuacao sera de 2 pontos",
-  "matchedColumns": [
-    4
-  ],
-  "keyword": "And "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 24
-    }
-  ],
-  "location": "AlugarFilmeSteps.umFilmeComEstoqueDeUnidades(int)"
-});
-formatter.result({
-  "duration": 118800,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "4",
-      "offset": 31
-    }
-  ],
-  "location": "AlugarFilmeSteps.queOPrecoDoAluguelSejaR$(int)"
-});
-formatter.result({
-  "duration": 96200,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "extendido",
-      "offset": 27
-    }
-  ],
-  "location": "AlugarFilmeSteps.queOTipoDoAluguelSejaExtendido(String)"
-});
-formatter.result({
-  "duration": 2071699,
-  "status": "passed"
-});
-formatter.match({
-  "location": "AlugarFilmeSteps.alugar()"
-});
-formatter.result({
-  "duration": 110300,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "8",
-      "offset": 27
-    }
-  ],
-  "location": "AlugarFilmeSteps.oPrecoDoAluguelSeraR$(int)"
-});
-formatter.result({
-  "duration": 119900,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 26
-    }
-  ],
-  "location": "AlugarFilmeSteps.aDataDeEntredaSeraEmDias(int)"
-});
-formatter.result({
-  "duration": 1251600,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 20
-    }
-  ],
-  "location": "AlugarFilmeSteps.aPontuacaoSeraDePontos(int)"
-});
-formatter.result({
-  "duration": 151801,
-  "status": "passed"
-});
-formatter.scenario({
   "line": 35,
-  "name": "Deve dar condicoes tipo de aluguel",
-  "description": "",
-  "id": "alugar-filme;deve-dar-condicoes-tipo-de-aluguel;;3",
-  "type": "scenario",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 24,
-  "name": "um filme com estoque de 2 unidades",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 25,
-  "name": "que o preco do aluguel seja R$ 4",
-  "matchedColumns": [
-    0
-  ],
+  "name": "a senha \"123456\"",
   "keyword": "And "
 });
 formatter.step({
-  "line": 26,
-  "name": "que o tipo do aluguel seja comum",
-  "matchedColumns": [
-    1
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 27,
-  "name": "alugar",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 28,
-  "name": "o preco do aluguel sera R$ 4",
-  "matchedColumns": [
-    2
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 29,
-  "name": "a data de entreda sera em 1 dias",
-  "matchedColumns": [
-    3
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 30,
-  "name": "a pontuacao sera de 1 pontos",
-  "matchedColumns": [
-    4
-  ],
-  "keyword": "And "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 24
-    }
-  ],
-  "location": "AlugarFilmeSteps.umFilmeComEstoqueDeUnidades(int)"
-});
-formatter.result({
-  "duration": 162700,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "4",
-      "offset": 31
-    }
-  ],
-  "location": "AlugarFilmeSteps.queOPrecoDoAluguelSejaR$(int)"
-});
-formatter.result({
-  "duration": 84701,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "comum",
-      "offset": 27
-    }
-  ],
-  "location": "AlugarFilmeSteps.queOTipoDoAluguelSejaExtendido(String)"
-});
-formatter.result({
-  "duration": 68800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "AlugarFilmeSteps.alugar()"
-});
-formatter.result({
-  "duration": 88001,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "4",
-      "offset": 27
-    }
-  ],
-  "location": "AlugarFilmeSteps.oPrecoDoAluguelSeraR$(int)"
-});
-formatter.result({
-  "duration": 384200,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 26
-    }
-  ],
-  "location": "AlugarFilmeSteps.aDataDeEntredaSeraEmDias(int)"
-});
-formatter.result({
-  "duration": 434800,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 20
-    }
-  ],
-  "location": "AlugarFilmeSteps.aPontuacaoSeraDePontos(int)"
-});
-formatter.result({
-  "duration": 149201,
-  "status": "passed"
-});
-formatter.scenario({
   "line": 36,
-  "name": "Deve dar condicoes tipo de aluguel",
-  "description": "",
-  "id": "alugar-filme;deve-dar-condicoes-tipo-de-aluguel;;4",
-  "type": "scenario",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 24,
-  "name": "um filme com estoque de 2 unidades",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 25,
-  "name": "que o preco do aluguel seja R$ 10",
-  "matchedColumns": [
-    0
-  ],
+  "name": "seleciono entrar",
   "keyword": "And "
 });
 formatter.step({
-  "line": 26,
-  "name": "que o tipo do aluguel seja extendido",
-  "matchedColumns": [
-    1
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 27,
-  "name": "alugar",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 28,
-  "name": "o preco do aluguel sera R$ 20",
-  "matchedColumns": [
-    2
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 29,
-  "name": "a data de entreda sera em 3 dias",
-  "matchedColumns": [
-    3
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 30,
-  "name": "a pontuacao sera de 2 pontos",
-  "matchedColumns": [
-    4
-  ],
-  "keyword": "And "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 24
-    }
-  ],
-  "location": "AlugarFilmeSteps.umFilmeComEstoqueDeUnidades(int)"
-});
-formatter.result({
-  "duration": 128101,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "10",
-      "offset": 31
-    }
-  ],
-  "location": "AlugarFilmeSteps.queOPrecoDoAluguelSejaR$(int)"
-});
-formatter.result({
-  "duration": 1280501,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "extendido",
-      "offset": 27
-    }
-  ],
-  "location": "AlugarFilmeSteps.queOTipoDoAluguelSejaExtendido(String)"
-});
-formatter.result({
-  "duration": 112301,
-  "status": "passed"
-});
-formatter.match({
-  "location": "AlugarFilmeSteps.alugar()"
-});
-formatter.result({
-  "duration": 107300,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "20",
-      "offset": 27
-    }
-  ],
-  "location": "AlugarFilmeSteps.oPrecoDoAluguelSeraR$(int)"
-});
-formatter.result({
-  "duration": 140101,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "3",
-      "offset": 26
-    }
-  ],
-  "location": "AlugarFilmeSteps.aDataDeEntredaSeraEmDias(int)"
-});
-formatter.result({
-  "duration": 1240200,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 20
-    }
-  ],
-  "location": "AlugarFilmeSteps.aPontuacaoSeraDePontos(int)"
-});
-formatter.result({
-  "duration": 124001,
-  "status": "passed"
-});
-formatter.scenario({
   "line": 37,
-  "name": "Deve dar condicoes tipo de aluguel",
-  "description": "",
-  "id": "alugar-filme;deve-dar-condicoes-tipo-de-aluguel;;5",
-  "type": "scenario",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 24,
-  "name": "um filme com estoque de 2 unidades",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 25,
-  "name": "que o preco do aluguel seja R$ 5",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 26,
-  "name": "que o tipo do aluguel seja semanal",
-  "matchedColumns": [
-    1
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 27,
-  "name": "alugar",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 28,
-  "name": "o preco do aluguel sera R$ 15",
-  "matchedColumns": [
-    2
-  ],
+  "name": "visualizo a pagina inicial",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 29,
-  "name": "a data de entreda sera em 7 dias",
-  "matchedColumns": [
-    3
-  ],
+  "line": 38,
+  "name": "seleciono Contas",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 39,
+  "name": "seleciono Adicionar",
   "keyword": "And "
 });
 formatter.step({
-  "line": 30,
-  "name": "a pontuacao sera de 3 pontos",
-  "matchedColumns": [
-    4
-  ],
+  "line": 40,
+  "name": "informo a conta \"Conta de Teste\"",
   "keyword": "And "
 });
+formatter.step({
+  "line": 41,
+  "name": "seleciono Salvar",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 42,
+  "name": "sou notificado que ja existe uma conta com esse nome",
+  "keyword": "Then "
+});
 formatter.match({
-  "arguments": [
-    {
-      "val": "2",
-      "offset": 24
-    }
-  ],
-  "location": "AlugarFilmeSteps.umFilmeComEstoqueDeUnidades(int)"
+  "location": "InserirContasSteps.queEstouAcessandoAAplicacao()"
 });
 formatter.result({
-  "duration": 105500,
+  "duration": 4333687100,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "5",
-      "offset": 31
+      "val": "higor@hotmail.com",
+      "offset": 19
     }
   ],
-  "location": "AlugarFilmeSteps.queOPrecoDoAluguelSejaR$(int)"
+  "location": "InserirContasSteps.informoOUsuario(String)"
 });
 formatter.result({
-  "duration": 97699,
+  "duration": 401771500,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "semanal",
-      "offset": 27
+      "val": "123456",
+      "offset": 9
     }
   ],
-  "location": "AlugarFilmeSteps.queOTipoDoAluguelSejaExtendido(String)"
+  "location": "InserirContasSteps.aSenha(String)"
 });
 formatter.result({
-  "duration": 72000,
+  "duration": 130631400,
   "status": "passed"
 });
 formatter.match({
-  "location": "AlugarFilmeSteps.alugar()"
+  "location": "InserirContasSteps.selecionoEntrar()"
 });
 formatter.result({
-  "duration": 108400,
+  "duration": 630588200,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "15",
-      "offset": 27
-    }
-  ],
-  "location": "AlugarFilmeSteps.oPrecoDoAluguelSeraR$(int)"
+  "location": "InserirContasSteps.visualizoAPaginaInicial()"
 });
 formatter.result({
-  "duration": 83900,
+  "duration": 50257300,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "7",
-      "offset": 26
-    }
-  ],
-  "location": "AlugarFilmeSteps.aDataDeEntredaSeraEmDias(int)"
+  "location": "InserirContasSteps.selecionoContas()"
 });
 formatter.result({
-  "duration": 429301,
+  "duration": 72249200,
+  "status": "passed"
+});
+formatter.match({
+  "location": "InserirContasSteps.selecionoAdicionar()"
+});
+formatter.result({
+  "duration": 307734600,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "3",
-      "offset": 20
+      "val": "Conta de Teste",
+      "offset": 17
     }
   ],
-  "location": "AlugarFilmeSteps.aPontuacaoSeraDePontos(int)"
+  "location": "InserirContasSteps.informoAConta(String)"
 });
 formatter.result({
-  "duration": 133500,
+  "duration": 116766500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "InserirContasSteps.selecionoSalvar()"
+});
+formatter.result({
+  "duration": 290430400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "InserirContasSteps.souNotificadoQueJaExisteUmaContaComEsseNome()"
+});
+formatter.result({
+  "duration": 51930000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 719599500,
   "status": "passed"
 });
 });
